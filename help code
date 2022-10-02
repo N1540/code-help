@@ -1,0 +1,43 @@
+# importing only those functions
+# which are needed
+from logging import shutdown
+from math import remainder
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
+import tkinter as tk
+from tkinter import messagebox
+from tkinter import ttk
+
+
+
+
+frame_styles = {"relief": "groove",
+                "bd": 3, "bg": "#BEB2A7",
+                "fg": "#073bb3", "font": ("Arial", 9, "bold")}
+
+
+# creating tkinter window
+root = Tk()
+root.title('Menu Demonstration')
+
+# Creating Menubar
+menubar = Menu(root)
+
+# Adding File Menu and commands
+
+file = Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Options', menu = file)
+file.add_command(label ='Reminder', command = None)
+
+file.add_command(label ='Shutdown', command = lambda: shutdown)
+
+file.add_separator()
+file.add_command(label ='Exit', command = root.destroy)
+
+
+
+
+# display Menu
+root.config(menu = menubar)
+mainloop()
