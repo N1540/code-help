@@ -1,3 +1,27 @@
+# importing only those functions
+# which are needed
+from logging import shutdown
+from math import remainder
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
+import tkinter as tk
+from tkinter import messagebox
+from tkinter import ttk
+
+
+
+
+
+
+# creating tkinter window
+root = Tk()
+root.title('Menu Demonstration')
+
+# Creating Menubar
+menubar = Menu(root)
+
+# Adding File Menu and commands
 
 class MenuBar(tk.Menu):
     def __init__(self, parent, some_widgets):
@@ -17,3 +41,15 @@ class MenuBar(tk.Menu):
         self.add_cascade(label="Menu3", menu=menu_pricing)
         menu_pricing.add_command(label="Page One", command=lambda: parent.show_frame())
 
+
+
+
+
+
+
+
+
+
+# display Menu
+root.config(menu = menubar)
+mainloop()
